@@ -1,0 +1,79 @@
+﻿{
+  "sites": [
+    {
+      "name": "ReportApp",
+      "dbName": "ReportServer",
+      "domainName": "localhost",
+      "installList": [
+        "rewrite_amd64_en-US.msi"
+      ],
+      "virtualDirectory": [
+        {
+          "name": "image",
+          "path": "D:\\WORK\\ShortTermStorage"
+        },
+        {
+          "name": "resource",
+          "path": "D:\\WORK\\Resource"
+        },
+        {
+          "name": "pdf",
+          "path": "D:\\WORK\\IntegrationServer\\PDF"
+        }
+      ],
+      "config": {
+        "backendConfigPath": "C:\\inetpub\\wwwroot\\ReportApp\\Web.config",
+        "frontEndJSDir": "C:\\inetpub\\wwwroot\\ReportApp\\assets",
+        "type": "xml",
+        "params": [
+          {
+            "key": "DBUserID",
+            "value": "{dbUserID}"
+          },
+          {
+            "key": "DBPassword",
+            "value": "{dbPassword}"
+          },
+          {
+            "key": "ServerName",
+            "value": "{serverName}"
+          },
+          {
+            "key": "DatabaseName",
+            "value": "{databaseName}"
+          },
+          {
+            "key": "VirtualPath",
+            "value": "http://{ip}:{port}//image"
+          },
+          {
+            "key": "PDFVirtualPath",
+            "value": "http://{ip}:{port}//pdf"
+          },
+          {
+            "key": "ResourcePath",
+            "value": "http://{ip}:{port}//resource"
+          },
+          {
+            "key": "PDFFolder",
+            "value": "D:\\WORK\\IntegrationServer\\PDF"
+          },
+          {
+            "key": "LogFolder",
+            "value": "D:\\WORK\\IntegrationServer\\Log"
+          },
+          {
+            "key": "ResourceFolder",
+            "value": "D:\\WORK\\Resource"
+          }
+        ]
+      },
+      "extraResources": [
+        {
+          "from": "Resource",
+          "to": "D:\\WORK\\Resource"
+        }
+      ]
+    }
+  ]
+}
